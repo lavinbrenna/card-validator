@@ -36,11 +36,46 @@ Description: numberChecker()
 Test: "It should determine whether a string is only composed of numbers"
 
 Code:
-let numbers = "0998445533334452"
-numberChecker(numbers);
+let cardString = "0";
+numberChecker(cardString);
 Expected Output:
 True
 
+Test: "It should determine whether a string returns false if there are letters"
+Code:
+let cardString = "0Vb";
+numberChecker(cardString);
+Expected Output:
+False
+
+Test: "It should determine whether a string has the correct number of numbers"
+Code:
+let cardString = "0Vb";
+numberChecker(cardString);
+Expected Output:
+False
+
+Test: "It should determine whether a string has the right number of numbers"
+Code:
+let cardString = "000000000000000"
+numberChecker(cardString);
+Expected Output:
+True
+
+Test: "It should determine whether a string has too many numbers"
+Code:
+let cardString = "00000000000000000000"
+numberChecker(cardString);
+Expected Output:
+False
+
+Description: cardCompanyChecker()
+
+Test: "It should determine whether a string starts with 34 or 37"
+let cardString = "340000000000000"
+cardCompanyChecker(cardString)
+Expected Output:
+"This card is from American Express"
 ## License
 
 MIT License

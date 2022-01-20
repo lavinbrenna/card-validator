@@ -1,17 +1,13 @@
-let cardString = "0";
 
-function numberChecker(cardString){
-  let numberArray = [0,1,2,3,4,5,6,7,8,9];
-  parseInt(cardString);
-  console.log(cardString);
-  let numCounter = 0;
-  for(i = 0; i < numberArray.length; i ++ ){
-    if(cardString.includes(numberArray[i])){
-      numCounter ++;
-      return true;
+let cardString = "0000000000000000";
+
+  function numberChecker(string){
+    const regex = /^[0-9]+$/;
+    if((string.match(regex) != null) && (string.length >= 15 && string.length <= 16)){
+      return "This card number is valid.";
     }else{
-      return false;
+      return "This card number is not valid.";
     }
   }
-}
-numberChecker(cardString);
+
+  numberChecker(cardString);
