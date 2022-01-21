@@ -58,6 +58,13 @@ let cardString = "4102080880435620";
     doubledArray.forEach(function(element){
       sum += element;
     });
+    let isValid = sum.toString().split('');
+    if(isValid[isValid.length-1] != 0){
+      console.log("invalid");
+    }
+    else{
+      console.log("valid");
+    }
   }
 
   cardCompanyChecker(cardString);

@@ -143,6 +143,13 @@ let cardString = "4102080880435620";
 luhnAlgorithm(cardString);
 Expected Output:
 52
+
+Test:"it should return invalid if second digit in sum is not 0"
+let cardString = "4102080880435620";
+luhnAlgorithm(cardString);
+Expected Output:
+invalid
+
 ## License
 
 MIT License
