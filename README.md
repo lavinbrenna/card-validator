@@ -130,6 +130,13 @@ luhnAlgorithm(cardString);
 Expected Output:
 [16,16,12]
 
+Test: "It should split values with more than one digit, add them together"
+Code:
+let cardString = "4102080880435620";
+luhnAlgorithm(cardString);
+Expected Output:
+[4,2,0,4,0,7,0,7,8,0,4,6,5,3,2,0]
+
 ## License
 
 MIT License

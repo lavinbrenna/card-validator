@@ -43,18 +43,21 @@ let cardString = "4102080880435620";
       if(i % 2 != 0){
         console.log("odd");
         let doubled = parseInt(cardArray[i]) * 2;
+        if(doubled > 9){
+
+        }
         doubledEvenArray.push(doubled);
       }else{
         console.log("even");
         doubledEvenArray.push(parseInt(cardArray[i]));
       }
     };
-    for(i = 0; i < doubledEvenArray.length; i++){
+    /*for(i = 0; i < doubledEvenArray.length; i++){
       if(doubledEvenArray[i] > 9){
         let needToAdd = doubledEvenArray[i];
         doubleDigit.push(needToAdd);
       }
-    }console.log(doubleDigit);
+    }console.log(doubleDigit);*/
   }
 
   cardCompanyChecker(cardString);
