@@ -137,6 +137,12 @@ luhnAlgorithm(cardString);
 Expected Output:
 [4,2,0,4,0,7,0,7,8,0,4,6,5,3,2,0]
 
+Test: "It should add all numbers in transformed array"
+Code:
+let cardString = "4102080880435620";
+luhnAlgorithm(cardString);
+Expected Output:
+52
 ## License
 
 MIT License
