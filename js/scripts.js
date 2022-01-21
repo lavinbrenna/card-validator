@@ -17,15 +17,25 @@ let cardString = "3400000000000000";
   console.log(cardString.charAt(0));
   console.log(cardString.charAt(1));
 
-  function isCardAmericanExpress(string){
+  function cardCompanyChecker(string){
     const cardArray = string.split("");
     console.log(cardArray);
-    if((parseInt(cardArray[0])=== 3) && (parseInt(cardArray[1])=== 4 || parseInt(cardArray[1]) === 7)){
+    if(cardArray[0].includes(3) && (cardArray[1].includes(4) ||cardArray[1].includes(7))){
       console.log("amex");
-      console.log(cardArray[0], cardArray[1]);
+      return "amex";
+    }else if(cardArray[0].includes(4)){
+      console.log("visa");
+      return "visa";
+    }else if(cardArray[0].includes(5)){
+      console.log("mastercard");
+      return "mastercard";
+    }else if(cardArray[0].includes(6)){
+      console.log("discover");
+      return "discover";
     }else{
       console.log("invalid");
+      return "invalid"
     }
   }
 
-  isCardAmericanExpress(cardString);
+  cardCompanyChecker(cardString);

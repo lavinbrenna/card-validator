@@ -84,6 +84,14 @@ let cardString = "4000000000000000";
 cardCompanyChecker(cardString);
 Expected Output:
 "visa"
+
+Test:"It should determine whether a string starts with 5"
+Code:
+let cardString = "5000000000000000";
+cardCompanyChecker(cardString);
+Expected Output:
+"mastercard"
+
 ## License
 
 MIT License
