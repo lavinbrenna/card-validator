@@ -1,4 +1,4 @@
-let cardString = "3400000000000000";
+let cardString = "4102080880435620";
 
 
   function numberChecker(string){
@@ -11,11 +11,7 @@ let cardString = "3400000000000000";
       return "This card number is not valid";
     }
   }
-
   numberChecker(cardString);
-
-  console.log(cardString.charAt(0));
-  console.log(cardString.charAt(1));
 
   function cardCompanyChecker(string){
     const cardArray = string.split("");
@@ -38,4 +34,22 @@ let cardString = "3400000000000000";
     }
   }
 
+  function luhnAlgorithm(string){
+    const cardArray = string.split("");
+    const doubledEvenArray = [];
+    console.log(cardArray);
+    for(i = 0; i < cardArray.length; i ++ ){
+      if(i % 2 != 0){
+        console.log("odd");
+        let doubled = parseInt(cardArray[i]) * 2;
+        doubledEvenArray.push(doubled);
+      }else{
+        console.log("even");
+        doubledEvenArray.push(parseInt(cardArray[i]));
+      }
+    }console.log(doubledEvenArray);
+  }
+
   cardCompanyChecker(cardString);
+
+  luhnAlgorithm(cardString);
