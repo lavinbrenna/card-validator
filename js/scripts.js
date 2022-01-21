@@ -1,35 +1,26 @@
-let cardString = "4102080880435620";
+let cardString = "4102080860435620";
 
 
   function numberChecker(string){
     const regex = /^[0-9]+$/;
     if((string.match(regex) != null) && (string.length >= 15 && string.length <= 16)){
-      console.log("This card number is valid.");
       return "This card number is valid";
     }else{
-      console.log("This card number is not valid.");
       return "This card number is not valid";
     }
   }
-  numberChecker(cardString);
 
   function cardCompanyChecker(string){
     const cardArray = string.split("");
-    console.log(cardArray);
     if(cardArray[0].includes(3) && (cardArray[1].includes(4) ||cardArray[1].includes(7))){
-      console.log("amex");
-      return "amex";
+      return "Amex";
     }else if(cardArray[0].includes(4)){
-      console.log("visa");
-      return "visa";
+      return "Visa";
     }else if(cardArray[0].includes(5)){
-      console.log("mastercard");
-      return "mastercard";
+      return "Mastercard";
     }else if(cardArray[0].includes(6)){
-      console.log("discover");
-      return "discover";
+      return "Discover";
     }else{
-      console.log("invalid");
       return "invalid"
     }
   }
@@ -38,10 +29,8 @@ let cardString = "4102080880435620";
     const cardArray = string.split("");
     const doubledArray = [];
     let sum = 0;
-    console.log(cardArray);
     for(i = 0; i < cardArray.length; i ++ ){
       if(i % 2 != 0){
-        console.log("odd");
         let doubled = parseInt(cardArray[i]) * 2;
         if(doubled > 9){
           let digits = doubled.toString().split('');
@@ -51,7 +40,6 @@ let cardString = "4102080880435620";
           doubledArray.push(doubled);
         }
       }else{
-        console.log("even");
         doubledArray.push(parseInt(cardArray[i]));
       }
     }
@@ -60,13 +48,12 @@ let cardString = "4102080880435620";
     });
     let isValid = sum.toString().split('');
     if(isValid[isValid.length-1] != 0){
-      console.log("invalid");
+      return "invalid";
     }
     else{
-      console.log("valid");
+      return "valid";
     }
   }
-
+  numberChecker(cardString);
   cardCompanyChecker(cardString);
-
   luhnAlgorithm(cardString);

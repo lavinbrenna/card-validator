@@ -151,6 +151,11 @@ Expected Output:
 invalid
 
 Test:"it should return valid if last digit in sum is 0"
+let cardString = "4102080860435620"
+luhnAlgorithm(cardString);
+Expected Output:
+valid
+
 ## License
 
 MIT License
