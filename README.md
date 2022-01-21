@@ -92,6 +92,44 @@ cardCompanyChecker(cardString);
 Expected Output:
 "mastercard"
 
+Description: luhnAlgorithm()
+
+Test:"it should specify whether the index of the array is even or odd"
+Code:
+let cardString = "4102080880435620";
+luhnAlgorithm(cardString);
+Expected Output:
+even
+odd
+even
+odd
+even
+odd
+even
+odd
+even
+odd
+even
+odd
+even
+odd
+even
+odd
+
+Test: "it should double the values in odd indices, not modify values at even indices, and push all to new array"
+Code:
+let cardString = "4102080880435620"
+luhnAlgorithm(cardString);
+Expected Output:
+[4,2,0,4,0,16,0,16,8,0,4,6,5,12,2,0]
+
+Test: "it should find values with more than one digit"
+Code:
+let cardString = "4102080880435620";
+luhnAlgorithm(cardString);
+Expected Output:
+[16,16,12]
+
 ## License
 
 MIT License
