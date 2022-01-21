@@ -1,0 +1,20 @@
+#isValid{
+  display: none;
+}
+#isNotValid{
+  display: none;
+}
+input{
+  max-width: 80%;
+}
+.jumbotron{
+  background-color:cadetblue;
+  text-align: center;
+}
+.btn{
+  background-color: green;
+  border: black 3px solid;
+}
+h2{
+  color:darkslategrey;
+}

@@ -1,5 +1,3 @@
-let cardString = "4102080860435620";
-
 
   function numberChecker(string){
     const regex = /^[0-9]+$/;
@@ -12,7 +10,8 @@ let cardString = "4102080860435620";
 
   function cardCompanyChecker(string){
     const cardArray = string.split("");
-    if(cardArray[0].includes(3) && (cardArray[1].includes(4) ||cardArray[1].includes(7))){
+    if(cardArray[0].includes(3) && (cardArray[1].includes(4) ||cardArray[1].includes(7))&& (cardArray.length === 15)){
+      console.log("amex")
       return "Amex";
     }else if(cardArray[0].includes(4)){
       return "Visa";
@@ -54,6 +53,16 @@ let cardString = "4102080860435620";
       return "valid";
     }
   }
-  numberChecker(cardString);
-  cardCompanyChecker(cardString);
-  luhnAlgorithm(cardString);
+
+
+  $(document).ready(function(){
+    $("form#cardForm").submit(function(){
+      event.preventDefault();
+      let cardString = $("input#cardNumber").val();
+      console.log(cardString);
+      console.log(numberChecker(cardString));
+      console.log(cardCompanyChecker(cardString));
+      console.log(luhnAlgorithm(cardString));
+    });
+  });
+  

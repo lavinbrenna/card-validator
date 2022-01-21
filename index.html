@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="css/styles.js" rel="stylesheet" type = "text/css">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type = "text/css">
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
   <title>Card validator</title>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Credit Card Validator</h2>
+    </div>
+    <form id="cardForm">
+      <div class ="form-group">
+        <label for ="cardNumber">Please enter your card number:</label>
+        <input id="cardNumber" class="form-control" type="text">
+    </div>
+    <button type="submit" class="btn">Validate my card!</button>
+  </form>
+  <div id="isValid">
+    <p>Your <span class="cardCompany"></span> card is valid!</p>
+  </div>
+  <div id="isNotValid">
+    <p>Your <span class="cardCompany"></span> card is not valid. Here is why: </p>
+  </div>
+  </div>
 </body>
 </html>
