@@ -36,7 +36,8 @@ let cardString = "4102080880435620";
 
   function luhnAlgorithm(string){
     const cardArray = string.split("");
-    const doubledEvenArray = [];
+    const doubledArray = [];
+    let sum = 0;
     console.log(cardArray);
     for(i = 0; i < cardArray.length; i ++ ){
       if(i % 2 != 0){
@@ -44,16 +45,19 @@ let cardString = "4102080880435620";
         let doubled = parseInt(cardArray[i]) * 2;
         if(doubled > 9){
           let digits = doubled.toString().split('');
-          doubledEvenArray.push(parseInt(digits[0]) + parseInt(digits[1]));
+          doubledArray.push(parseInt(digits[0]) + parseInt(digits[1]));
         }
         else{
-          doubledEvenArray.push(doubled);
+          doubledArray.push(doubled);
         }
       }else{
         console.log("even");
-        doubledEvenArray.push(parseInt(cardArray[i]));
+        doubledArray.push(parseInt(cardArray[i]));
       }
-    }console.log(doubledEvenArray);
+    }
+    doubledArray.forEach(function(element){
+      sum += element;
+    });
   }
 
   cardCompanyChecker(cardString);
