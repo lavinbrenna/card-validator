@@ -72,10 +72,18 @@ False
 Description: cardCompanyChecker()
 
 Test: "It should determine whether a string starts with 34 or 37"
-let cardString = "340000000000000"
+Code:
+let cardString = "340000000000000";
 cardCompanyChecker(cardString)
 Expected Output:
-"This card is from American Express"
+"amex"
+
+Test:"It should determine whether a string starts with 4"
+Code:
+let cardString = "4000000000000000";
+cardCompanyChecker(cardString);
+Expected Output:
+"visa"
 ## License
 
 MIT License
